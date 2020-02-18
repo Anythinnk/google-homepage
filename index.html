@@ -7,7 +7,7 @@
         <style>
             body {
                 background-color: rgb(255,255,255);
-                width: 100%;
+                min-width: 980px;
                 font-family: arial, sans-serif;
             }
             main {
@@ -54,15 +54,22 @@
                 border-radius: 4px;
                 font-size: 14px;
                 text-align: center;
+                cursor: pointer;
             }
             #search-button {
                 color: white;
                 background-color: #1a73e8;
             }
+            #search-button:hover {
+                background-color: #1967d2;
+            }
             #random-button {
                 color: #1a73e8;
                 background-color: white;
                 border-color: #dadce0;
+            }
+            #random-button:hover {
+                background-color: #e8f0fe;
             }
             a {
                 padding: 0 3px;
@@ -71,6 +78,9 @@
             }
             a:visited {
                 color: #609;
+            }
+            a:hover {
+                text-decoration: underline;
             }
         </style>
     </head>
