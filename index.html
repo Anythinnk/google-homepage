@@ -4,19 +4,94 @@
         <title>
             Google
         </title>
+        <style>
+            body {
+                background-color: rgb(255,255,255);
+                width: 100%;
+                font-family: arial, sans-serif;
+            }
+            main {
+                display: grid;
+                grid-template-rows: 233px 52px 58px 28px;
+                grid-template-areas:
+                    "logo"
+                    "searchbar"
+                    "buttons"
+                    "languages";
+                grid-gap: 18px;
+                justify-content: center;
+                align-items: center;
+            }
+            .main-logo {
+                grid-area: logo;
+                justify-self: center;
+                padding: 109px 0 0;
+                margin: 89px 0 0;
+            }
+            .search-container{
+                grid-area: searchbar;
+                justify-self: center;
+                align-self: end;
+                padding: 6px 0 0;
+            }
+            .buttons-container{
+                grid-area: buttons;
+                justify-self: center;
+                padding: 18px 0 0;
+            }
+            .language-nav {
+                grid-area: languages;
+                justify-self: center;
+                margin: 30px 0 24px;
+                font-size: 13px;
+            }
+            .button {
+                height: 36px;
+                padding: 0 24px;
+                margin: 11px 4px;
+                border: 1px solid;
+                border-color: #f2f2f2;
+                border-radius: 4px;
+                font-size: 14px;
+                text-align: center;
+            }
+            #search-button {
+                color: white;
+                background-color: #1a73e8;
+            }
+            #random-button {
+                color: #1a73e8;
+                background-color: white;
+                border-color: #dadce0;
+            }
+            a {
+                padding: 0 3px;
+                color: #1a0dab;
+                text-decoration: none;
+            }
+            a:visited {
+                color: #609;
+            }
+        </style>
     </head>
     <body>
         <header>
 
         </header>
         <main>
-            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
-            <form>
-                <input type="text" id="search-field">
-                <button type="button" class="button" id="search-button">Google Search</button>
-                <button type="button" class="button" id="random-button">I'm Feeling Lucky</button>
+            <div class="main-logo">
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+            </div>
+            <form class="search-container">
+                <input type="text" id="search-box">
             </form>
-            <p>Google offered in: <a href="">中文(简体)</a> <a href="">Melayu</a> <a href="">தமிழ்</a></p>
+            <form class="buttons-container">
+                    <button type="button" class="button" id="search-button">Google Search</button>
+                    <button type="button" class="button" id="random-button">I'm Feeling Lucky</button>    
+            </form>
+            <div class="language-nav">
+                <p>Google offered in:  <a href="">中文(简体)</a>  <a href="">Melayu</a>  <a href="">தமிழ்</a></p>
+            </div>
         </main>
         <footer>
 
