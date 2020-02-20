@@ -4,6 +4,7 @@
         <title>
             Google
         </title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>
             body {
                 background-color: rgb(255,255,255);
@@ -12,13 +13,13 @@
             }
             main {
                 display: grid;
-                grid-template-rows: 233px 52px 58px 28px;
+                grid-template-rows: 267px 52px 58px 28px;
                 grid-template-areas:
                     "logo"
                     "searchbar"
                     "buttons"
                     "languages";
-                grid-gap: 18px;
+                grid-gap: 16px;
                 justify-content: center;
                 align-items: center;
             }
@@ -26,24 +27,47 @@
                 grid-area: logo;
                 justify-self: center;
                 padding: 109px 0 0;
-                margin: 89px 0 0;
+                margin: 89px 0 24px;
             }
-            .search-container{
+            .search-container {
                 grid-area: searchbar;
                 justify-self: center;
-                align-self: end;
-                padding: 6px 0 0;
+                width: 482px;
+                height: 44px;
+                border: 1px solid #dfe1e5;
+                border-radius: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .search-container:hover {
+                box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
+            }
+            #search-logo {
+                font-size: 22px;
+                padding: 0 0 0 10px;
+                color: #9AA0A6;
+                cursor: default;
+            }
+            #search-box {
+                outline: none;
+                height: 34px;
+                width: 387px;
+                border: none;
+                line-height: 34px;
+                font-size: 16px;
+                color: rgba(0,0,0,.87);
+            }
+            #mic-logo {
+                height: 24px;
+                width: 24px;
+                padding: 0 10px 0 0;
+                vertical-align: middle;
+                cursor: pointer;
             }
             .buttons-container{
                 grid-area: buttons;
                 justify-self: center;
-                padding: 18px 0 0;
-            }
-            .language-nav {
-                grid-area: languages;
-                justify-self: center;
-                margin: 30px 0 24px;
-                font-size: 13px;
             }
             .button {
                 height: 36px;
@@ -55,6 +79,7 @@
                 font-size: 14px;
                 text-align: center;
                 cursor: pointer;
+                outline: none;
             }
             #search-button {
                 color: white;
@@ -70,6 +95,11 @@
             }
             #random-button:hover {
                 background-color: #e8f0fe;
+            }
+            .language-nav {
+                grid-area: languages;
+                justify-self: center;
+                font-size: 13px;
             }
             a {
                 padding: 0 3px;
@@ -93,7 +123,9 @@
                 <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
             </div>
             <form class="search-container">
+                <i class="material-icons" id="search-logo">search</i>
                 <input type="text" id="search-box">
+                <img src="https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png" alt="Mic Logo" id="mic-logo">
             </form>
             <form class="buttons-container">
                     <button type="button" class="button" id="search-button">Google Search</button>
