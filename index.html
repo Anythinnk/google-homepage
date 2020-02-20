@@ -11,6 +11,52 @@
                 min-width: 980px;
                 font-family: arial, sans-serif;
             }
+            .account-nav {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 8px 28px 0;
+                height: 30px;
+            }
+            .account-nav a {
+                color: rgba(0,0,0,0.87);
+                text-decoration: none;
+                font-size: 13px;
+                line-height: 24px;
+            }
+            .account-nav a:hover {
+                opacity: 0.85;
+            }
+            #images-nav {
+                margin: 0 15px;
+            }
+            #apps-access {
+                color: black;
+                cursor: pointer;
+                text-decoration: none;
+                opacity: 0.55;
+            }
+            #apps-access:hover {
+                opacity: 0.85;
+            }
+            #sign-in-button {
+                height: 30px;
+                line-height: 28px;
+                padding: 0 12px;
+                margin: 0 0 0 15px;
+                color: white;
+                background-color: #4387fd;
+                border-color: #4387fd;
+                border-radius: 2px;
+                font-size: 13px;
+                font-weight: bold;
+                text-align: center;
+                cursor: pointer;
+                outline: none;
+            }
+            #sign-in-button:hover {
+                background-color: #3f7fee;
+            }
             main {
                 display: grid;
                 grid-template-rows: 267px 52px 58px 28px;
@@ -32,7 +78,7 @@
             .search-container {
                 grid-area: searchbar;
                 justify-self: center;
-                width: 482px;
+                width: 584px;
                 height: 44px;
                 border: 1px solid #dfe1e5;
                 border-radius: 24px;
@@ -52,7 +98,7 @@
             #search-box {
                 outline: none;
                 height: 34px;
-                width: 387px;
+                width: 487px;
                 border: none;
                 line-height: 34px;
                 font-size: 16px;
@@ -101,12 +147,12 @@
                 justify-self: center;
                 font-size: 13px;
             }
-            a {
+            .language-nav a {
                 padding: 0 3px;
                 color: #1a0dab;
                 text-decoration: none;
             }
-            a:visited {
+            .language-nav a:visited {
                 color: #609;
             }
             a:hover {
@@ -116,7 +162,12 @@
     </head>
     <body>
         <header>
-
+            <nav class="account-nav">
+                <a href="" id="gmail-nav">Gmail</a>
+                <a href="" id="images-nav">Images</a>
+                <i class="material-icons" id="apps-access">apps</i>
+                <button type="button" class="button" id="sign-in-button">Sign In</button>
+            </nav>
         </header>
         <main>
             <div class="main-logo">
