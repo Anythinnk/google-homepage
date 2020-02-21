@@ -154,6 +154,44 @@
             .language-nav a:visited {
                 color: #609;
             }
+            footer {
+                position: fixed;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                min-width: 980px;
+                display: flex;
+                flex-direction: column;
+                background-color: #f2f2f2;
+                border-top: 1px solid #e4e4e4;
+            }
+            #location {
+                height: 41px;
+                line-height: 41px;
+                margin: 0;
+                padding: 0 0 0 27px;
+                font-size: 15px;
+                color: rgba(0,0,0,.54);
+            }
+            .other-nav {
+                display: flex;
+                height: 40px;
+                align-items: center;
+                justify-content: flex-start;
+                border-top: 1px solid #e4e4e4;
+            }
+            .other-nav a {
+                padding: 0 0 0 27px;
+                color: #5f6368;
+                text-decoration: none;
+                font-size: 13px;
+            }
+            #privacy-nav {
+                margin-left: auto;
+            }
+            #settings-nav {
+                padding: 0 27px 0;
+            }
             a:hover {
                 text-decoration: underline;
             }
@@ -187,7 +225,7 @@
             </div>
             <form class="search-container">
                 <i class="material-icons" id="search-logo">search</i>
-                <input type="text" id="search-box">
+                <input type="text" id="search-box" autofocus>
                 <img src="https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png" alt="Mic Logo" id="mic-logo">
             </form>
             <form class="buttons-container">
@@ -199,7 +237,16 @@
             </div>
         </main>
         <footer>
-
+            <p id="location">Singapore</p>
+            <nav class="other-nav">
+                <a href="">Advertising</a>
+                <a href="">Business</a>
+                <a href="">About</a>
+                <a href="">How Search Works</a>
+                <a href="" id="privacy-nav">Privacy</a>
+                <a href="">Terms</a>
+                <a href="" id="settings-nav">Settings</a>
+            </nav>
         </footer>
     </body>
 </html>
